@@ -1,0 +1,19 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+main {
+    width: 75%;
+    height: 20rem;
+    margin: 10rem auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 0 0 50%;
+}
