@@ -4,17 +4,23 @@ const formVeri = document.querySelector(".form");
 const inputText = document.querySelector(".isim");
 const inputYas = document.querySelector(".yaş");
 const liste = document.querySelector(".sağ_div2_ul");
+const hepsiniSil = document.querySelector(".sağ_div1_img")
 
 kaydet();
 
 function kaydet() {
+    //listeye eleman eklemek için event
     formVeri.addEventListener("submit",veriAlma);
+    //listeden eleman silmek için event
+    liste.addEventListener("click",veriSilme);
+    //listeden hepsini silmek için
+    hepsiniSil.addEventListener("click",tümVeriSil);
 }
 
 function veriAlma(event) {
     console.log(inputText.value);
     console.log(inputYas.value);
-    event.preventDefault();
+
 
     //***Span Tag */
     const span1 = document.createElement("span");
@@ -56,7 +62,29 @@ function veriAlma(event) {
     console.log(li);
 
     liste.appendChild(li);
+    inputText.value = "";
+    inputYas.value = "";
+    event.preventDefault();
 
+}
+
+function veriSilme(event) {
+    if (event.target.className === "sağ_div2_ul_li_a") {
+        event.target.parentElement.parentElement.remove();
+    }
+    event.preventDefault();
+}
+
+function tümVeriSil(event) {
+    if(event.target.className === "sağ_div1_img"){
+        // liste.innerHTML = "";
+
+        for (let i = 0; i < liste.children.length; i++) {
+            liste.children[i].parentElement.remove();
+
+            
+        }
+    }
 }
 
 
