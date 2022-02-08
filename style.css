@@ -2,6 +2,8 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
 }
 main {
     width: 75%;
@@ -16,4 +18,36 @@ form {
     flex-direction: column;
     gap: 10px;
     flex: 0 0 50%;
+}
+.sağ {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 50%;
+}
+.sağ_div1 {
+    height: 3rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(226, 67, 99);
+    border-radius: 10px;
+}
+.sağ {
+    border:1px solid black
+}
+.sağ_div2_ul {
+    display: flex;
+    flex-direction: column;
+
+}
+.sağ_div2_ul_li {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: bisque;
+    border-radius: 10px;
+    margin-top: 10px;
+    padding: 5px;
 }
